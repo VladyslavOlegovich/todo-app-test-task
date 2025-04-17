@@ -1,106 +1,67 @@
-<!-- This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Todo App
+
+A simple Todo app built with Next.js (App Router), TypeScript, Tailwind CSS, and React Query. It fetches todos from the JSONPlaceholder API, allows adding, deleting, and toggling todos, and persists changes across page refreshes using `localStorage`. The app follows Feature-Sliced Design (FSD) for a modular architecture and includes a polished UI with animations and responsive design.
+
+## Live Demo
+
+[Try it now →](https://todo-app-test-task-ten.vercel.app/)
+
+## Features
+
+- Fetch and display todos from JSONPlaceholder API
+- Add new todos (with validation for titles ≥ 3 characters)
+- Delete todos (persists deletion across refreshes)
+- Toggle todo completion (persists state across refreshes)
+- Optimistic UI updates with React Query
+- Client-side persistence using `localStorage` for added, deleted, and toggled todos
+- Unique IDs for new todos using `uuid`
+- Responsive design with Tailwind CSS
+- Smooth animations (fade-in on add, fade-out on delete)
+- Hover effects (e.g., checkbox scaling, title color change)
+- Text wrapping for long todo titles
+- Modular UI components (`TodoForm`, `TodoListItems`, `TodoItem`) for maintainability
+- Basic error handling and loading states
+
+## Tech Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS (with custom animations)
+- React Query (for data fetching and state management)
+- Axios (for API requests)
+- uuid (for generating unique IDs)
+- JSONPlaceholder API (mock backend)
+
+  ## Architecture
+
+The app follows the Feature-Sliced Design (FSD) architecture, which promotes modularity and separation of concerns:
+
+- app/ → Routing and global providers
+- features/ → Business logic (e.g., todos feature)
+- entities/ → Data models (e.g., Todo entity)
+- shared/ → Reusable utilities (e.g., API client, localStorage helpers)
+
+  Each layer has a specific role and encourages scalable project structure as the app grows.
+
+## Prerequisites
+
+- Node.js (version 16 or higher)
+- npm or yarn
 
 ## Getting Started
 
-First, run the development server:
+To run the project locally:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details. -->
-
-📝 Todo App
-
-A clean and minimalistic Todo App built with Next.js, React Query, Tailwind CSS, and TypeScript.
-It uses the JSONPlaceholder API, supports optimistic updates, animations, and data persistence in localStorage.
-
-🚀 Try it now →
-
-✨ Features
-✅ Fetch todos from JSONPlaceholder API
-
-➕ Add todos (title ≥ 3 characters)
-
-❌ Delete todos
-
-🔁 Toggle completion status
-
-⚡ Optimistic UI updates with React Query
-
-💾 Persists all changes in localStorage
-
-🆔 Unique IDs with uuid
-
-📱 Responsive layout (Tailwind CSS)
-
-🎞 Smooth fade animations on add/delete
-
-🖱 Nice hover effects (scaling, color transitions)
-
-✍️ Handles long text gracefully
-
-🧩 Modular components (TodoForm, TodoItem, TodoListItems)
-
-🛡 Basic loading and error states
-
-📂 Project Structure
-Following Feature-Sliced Design (FSD):
-
-src/
-├── app/ → Routing & global providers
-├── features/ → Business logic (e.g. todos feature)
-├── entities/ → Data models (e.g. Todo)
-├── shared/ → Reusable utils (e.g. API client, localStorage helpers)
-
-🧱 Tech Stack
-Next.js (App Router)
-
-React Query
-
-TypeScript
-
-Tailwind CSS
-
-Axios
-
-uuid
-
-JSONPlaceholder API
-
-🛠 Getting Started
-
-1. Clone the repo
+1. Clone the repository:
+   ```bash
    git clone https://github.com/your-username/todo-app.git
    cd todo-app
-2. Install dependencies
+
+ 2. Install dependencies:
+   ```bash
    npm install
-3. Run the dev server
+
+3. Start the development server:
+   ```bash
    npm run dev
-4. Open your browser
-   http://localhost:3000
+4. Open your browser and go to http://localhost:3000
