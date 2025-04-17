@@ -16,7 +16,6 @@ A simple Todo app built with Next.js (App Router), TypeScript, Tailwind CSS, and
 - Client-side persistence using `localStorage` for added, deleted, and toggled todos
 - Unique IDs for new todos using `uuid`
 - Responsive design with Tailwind CSS
-- Smooth animations (fade-in on add, fade-out on delete)
 - Hover effects (e.g., checkbox scaling, title color change)
 - Text wrapping for long todo titles
 - Modular UI components (`TodoForm`, `TodoListItems`, `TodoItem`) for maintainability
